@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# E.F.I – Práctica Profesionalizante I (JavaScript)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Frontend con React + JWT + CRUD (Posts)
 
-## Available Scripts
+## Integrantes del Equipo
 
-In the project directory, you can run:
+- **Mateo Johnston**
+- **Federico Ramirez**
+- **Juan Laporte**
 
-### `npm start`
+## Backend (API Flask)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+URL del backend provisto por la cátedra:  
+**https://github.com/mateoJk/efi_segundo_semestre.git**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Descripción del Proyecto
 
-### `npm test`
+Este proyecto es una aplicación web desarrollada en **React** que consume una API en **Flask** utilizando **JWT** para autenticación.  
+Incluye un CRUD completo de **posts**, manejo de roles, rutas protegidas y una interfaz visual moderna y simple
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Objetivos
 
-### `npm run build`
+- Implementar autenticación con JWT (Bearer Token)
+- Crear, listar, editar y eliminar posts
+- Gestionar roles (admin / user)
+- Proteger rutas según permisos
+- Presentar una interfaz clara, simple
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologías Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 18+
+- React Router DOM
+- Context API (AuthContext)
+- JWT Decode
+- Material UI / React Bootstrap
+- SweetAlert2 / Toasts
+- API Flask (externa)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Funcionalidades
 
-### `npm run eject`
+### Autenticación
+- Registro con: name, email, password y rol
+- Inicio de sesión y obtención del JWT
+- Decodificación del token
+- Manejo de sesión con AuthContext
+- Logout limpiando token y usuario
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### CRUD de Posts
+- Crear publicaciones
+- Editar publicaciones
+- Eliminar publicaciones
+- Listar publicaciones
+- Datos: título, contenido, autor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Seguridad y Roles
+- Validación de token en rutas privadas
+- Expiración del token
+- Roles:
+  - **admin**: acceso ampliado
+  - **user**: solo gestiona sus propios posts y reviews
+  - **moderator**: gestiona posts y comentarios de usuarios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Interfaz de Usuario
+- UI simple y sencilla
+- Formularios con validaciones
+- Navegación clara mediante navbar
+- Alertas visuales de error y éxito
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estructura del Proyecto
 
-## Learn More
+```
+/src
+ ├── api/
+ │     └── api.js
+ │
+ ├── components/
+ │     ├── ConfirmModal.jsx
+ │     ├── NavbarTop.jsx
+ │     └── ProtectedRoute.jsx
+ │
+ ├── contexts/
+ │     └── AuthContext.jsx
+ │
+ ├── pages/
+ │     ├── Categories.jsx
+ │     ├── Login.jsx
+ │     ├── PostDetail.jsx
+ │     ├── PostForm.jsx
+ │     ├── PostsList.jsx
+ │     ├── Profile.jsx
+ │     ├── Register.jsx
+ │     ├── Stats.jsx
+ │     └── Users.jsx
+ │
+ ├── App.jsx
+ ├── App.css
+ 
+ ├── index.css
+ ├── index.js
+ ├── logo.svg
+ ├── reportWebVitals.js
+ └── setupTests.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Instalación y Ejecución
 
-### Code Splitting
+### 1. Clonar el repositorio
+```
+git clone https://github.com/mateoJk/efi_js_miniblog
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Entrar al directorio
+```
+cd efi_js_miniblog
+```
 
-### Analyzing the Bundle Size
+### 3. Instalar dependencias
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### 5. Ejecutar en modo desarrollo
+```
+npm start
+```
+REACT_APP_API_URL=http://localhost:5000/api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Abrir en navegador:  
+http://localhost:3000 
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Buenas Prácticas Implementadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Componentes reutilizables
+- Código modular organizado por responsabilidades
+- Manejo de sesión global con Context API
+- Hooks para comunicación con API
+- Validaciones en formularios
+- Manejo de errores y mensajes al usuario
+- Control de permisos por rol
+- Rutas protegidas con React Router
 
-### `npm run build` fails to minify
+## Conclusión
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El proyecto demuestra dominio en React, JWT, consumo de APIs, CRUDs, manejo de sesiones, roles de usuario y diseño simple y claro.  
+
