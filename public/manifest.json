@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Miniblog",
+  "name": "Miniblog Enterprise Management System",
+  "description": "Plataforma corporativa para la gestión de contenidos y análisis de métricas.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,19 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "theme_color": "#1976d2",
+  "background_color": "#f8f9fa"
 }
