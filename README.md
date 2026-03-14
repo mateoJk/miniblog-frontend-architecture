@@ -46,7 +46,7 @@ Implementación de seguridad granular distribuida:
 
 ## 🛠️ Stack Tecnológico
 * **Frontend Core**: React 18+ | React Router DOM v6
-* **UI Framework**: Material UI (MUI) con Custom ThemeProvider
+* **UI Framework**: Material UI (MUI) | Custom ThemeProvider
 * **Data Handling**: Axios | JWT-Decode
 * **UX Components**: SweetAlert2 | React Toastify | PrimeIcons
 * **Standards**: PWA (Manifest & Meta-tags) | ES6+ Coding Standards
