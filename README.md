@@ -1,4 +1,4 @@
-# Enterprise Miniblog Frontend | High-Performance React Architecture 
+# Miniblog | Enterprise Frontend Architecture
 
 [![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![MUI](https://img.shields.io/badge/UI--Library-Material--UI-007FFF?style=flat-square&logo=mui)](https://mui.com/)
